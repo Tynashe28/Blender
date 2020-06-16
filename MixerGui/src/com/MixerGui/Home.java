@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class Home {
 
@@ -51,8 +52,9 @@ public class Home {
 		home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		home.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("welcome to bla bla bla");
-		lblNewLabel.setBounds(183, 62, 136, 20);
+		JLabel lblNewLabel = new JLabel("Welcome Login");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblNewLabel.setBounds(153, 47, 246, 50);
 		home.getContentPane().add(lblNewLabel);
 		
 		JLabel lbl_username = new JLabel("Username");
@@ -79,7 +81,7 @@ public class Home {
 			public void actionPerformed(ActionEvent arg0) {
 				String username = txt_username.getText();
 				String password = txt_password.getText();
-				if(username.equals("") && password.equals("")) {
+				if(username.equals("jassy") && password.equals("jassy2020")) {
 					JOptionPane.showMessageDialog(null, "correct password");
 					home.dispose();
 					Dashboard dashboard = new Dashboard();
@@ -92,14 +94,5 @@ public class Home {
 		});
 		btn_login.setBounds(119, 253, 280, 23);
 		home.getContentPane().add(btn_login);
-		
-		JButton btn_forgotPassword = new JButton("Forgot Password");
-		btn_forgotPassword.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-			}
-		});
-		btn_forgotPassword.setBounds(119, 299, 136, 23);
-		home.getContentPane().add(btn_forgotPassword);
 	}
 }
