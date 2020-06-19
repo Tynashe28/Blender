@@ -54,7 +54,7 @@ public class Production extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JComboBox combo_JuiceType = new JComboBox();
-		combo_JuiceType.setModel(new DefaultComboBoxModel(new String[] {"Orange Crush", "Cream Soda", "Peach", "Raspberry"}));
+		combo_JuiceType.setModel(new DefaultComboBoxModel(new String[] {"Orange", "CreamSoda", "Peach", "Raspberry"}));
 		combo_JuiceType.setBounds(144, 109, 149, 35);
 		contentPane.add(combo_JuiceType);
 		
@@ -66,10 +66,10 @@ public class Production extends JFrame {
 		btn_next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String juiceType =  (String) combo_JuiceType.getSelectedItem();
-				if(juiceType.equals("Orange Crush")) {
+				if(juiceType.equals("Orange")) {
 					new blendingProcess(juiceType).setVisible(true);
 					dispose();
-				}else if (juiceType.equals("Cream Soda")) {
+				}else if (juiceType.equals("CreamSoda")) {
 					new blendingProcess(juiceType).setVisible(true);
 					dispose();
 				}else if (juiceType.equals("Peach")) {

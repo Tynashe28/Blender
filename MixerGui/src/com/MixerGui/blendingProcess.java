@@ -349,8 +349,9 @@ public class blendingProcess extends JFrame {
 						showVolumes();
 						try {
 							
-							String juiceType = txt_juiceType.getText();
-							sPort.getOutputStream().write("start".getBytes());
+							//String juiceType = txt_juiceType.getText();
+							//sPort.getOutputStream().write(txt_juiceType.getText().getBytes());
+							sPort.getOutputStream().write(txt_juiceType.getText().getBytes());
 							sPort.getOutputStream().flush(); 
 							Thread.sleep(1000);
 						} catch (IOException | InterruptedException e) {
