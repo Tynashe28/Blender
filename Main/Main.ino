@@ -58,7 +58,7 @@ void loop(){
 void startOrangeCrushProcess(int q){
     int wSpeed = 255;
     int sSpeed = 200;
-    int oSpeed = 167;
+    int oSpeed = 255;
     int cSpeed = 255;
     int bSpeed = 100;
     analogWrite(WATER_PUMP,wSpeed);
@@ -79,7 +79,7 @@ void startCreamSodaProcess(){
     analogWrite(WATER_PUMP,wSpeed);
     analogWrite(SUGAR,sSpeed);
     digitalWrite(CREAMSODA,HIGH);
-    analogWrite(ORANGE,0);
+   // analogWrite(ORANGE,0);
     digitalWrite(PEACH,LOW);
     digitalWrite(RASPBERRY,LOW);
     analogWrite(CONCENTRATE,cSpeed);
@@ -97,7 +97,7 @@ void startPeachProcess(){
     digitalWrite(CREAMSODA,LOW);
     digitalWrite(RASPBERRY,LOW);
     analogWrite(ORANGE,0);
-    analogWrite(CONCENTRATE,cSpeed);
+   // analogWrite(CONCENTRATE,cSpeed);
     analogWrite(BASE,bSpeed);
 }
 void startRaspberryProcess(){
@@ -111,7 +111,7 @@ void startRaspberryProcess(){
     digitalWrite(RASPBERRY,HIGH);
     digitalWrite(PEACH,LOW);
     digitalWrite(CREAMSODA,LOW);
-    analogWrite(ORANGE,2);
+    //analogWrite(ORANGE,2);
     analogWrite(CONCENTRATE,cSpeed);
     analogWrite(BASE,bSpeed);
 }
